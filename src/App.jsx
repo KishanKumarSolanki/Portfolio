@@ -15,6 +15,7 @@ function App() {
         <Hero />
         <DottedGlowBackground />
         <BlurBlob position={{ top: '35%', left: '20%' }} size={{ width: '30%', height: '40%' }} />
+     
       </div>
     </>
   )

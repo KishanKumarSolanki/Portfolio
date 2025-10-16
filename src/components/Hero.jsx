@@ -1,5 +1,6 @@
 import React from 'react';
 import profile from '../assets/profile.jpg';
+import resumePDF from '../assets/resume.pdf'; 
 import { TypeAnimation } from 'react-type-animation';
 import Tilt from 'react-parallax-tilt';
 
@@ -18,6 +19,61 @@ const ArrowRightIcon = ({ className = 'w-5 h-5' }) => (
     <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
   </svg>
 );
+
+const handleDownload = () => {
+  // Create a link element
+  const link = document.createElement('a');
+  link.href = resumePDF;
+  link.download = 'Kishan_Solanki_Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+// Update the Resume button with loading state
+const ResumeButton = () => {
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  const handleClick = async () => {
+    setIsLoading(true);
+    try {
+      await handleDownload();
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <button
+      className="px-5 py-2.5 text-sm font-medium text-white border border-gray-600 rounded-lg hover:bg-gray-700 transition duration-100 flex items-center gap-2"
+      onClick={handleClick}
+      disabled={isLoading}
+    >
+      {isLoading ? (
+        <>
+          <span className="animate-spin">⟳</span> Loading...
+        </>
+      ) : (
+        <>
+          <svg 
+            className="w-4 h-4" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+            />
+          </svg>
+          Resume
+        </>
+      )}
+    </button>
+  );
+};
 
 const HeroSection = () => {
   const profileImageUrl = profile;
@@ -94,12 +150,7 @@ const HeroSection = () => {
               </span>
             </button>
 
-            <button
-              className="px-5 py-2.5 text-sm font-medium text-white border border-gray-600 rounded-lg hover:bg-gray-700 transition duration-300"
-              onClick={() => console.log("Navigate to Contact")}
-            >
-              Resume
-            </button>
+            <ResumeButton />
           </div>
         </div>
 
