@@ -3,6 +3,8 @@ import profile from '../assets/profile.jpg';
 import resumePDF from '../assets/resume.pdf'; 
 import { TypeAnimation } from 'react-type-animation';
 import Tilt from 'react-parallax-tilt';
+import { useNavigate } from 'react-router-dom';
+
 // import { DottedGlowBackground } from "./ui/dotted-glow-background";
 
 // Inline SVG for the 'ArrowRight' icon (simulating lucide-react or similar)
@@ -77,6 +79,16 @@ const ResumeButton = () => {
 };
 
 const HeroSection = () => {
+  const handleViewWork = () => {
+    const projectsSection = document.getElementById('work');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   const profileImageUrl = profile;
 
   return (
@@ -143,7 +155,7 @@ const HeroSection = () => {
           <div className="flex space-x-6 mt-8">
             <button
               className="group relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 shadow-lg shadow-blue-500/50"
-              onClick={() => console.log("Navigate to Projects")}
+              onClick={handleViewWork}
             >
               <span className="relative px-5 py-2.5 transition-all ease-in duration-300 bg-gray-900 rounded-md text-white">
                 View My Work

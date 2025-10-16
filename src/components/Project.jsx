@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaExternalLinkAlt, FaCode, FaGithub } from "react-icons/fa";
-import Texteditor from "../assets/Text editor.png";
+// import texteditor from "../assets/texteditor.png";
 import FoodHub from "../assets/food hub.png";
 import HappyToy from "../assets/happy toy.png";
 
@@ -24,7 +24,7 @@ const Project = () => {
                             <div className="flex-1 flex justify-center">
                                 <div className="bg-gradient-to-b from-[#1E1E20] to-[#0B0B0C] rounded-2xl overflow-hidden shadow-lg border border-gray-800">
                                     <img
-                                        src= {Texteditor}
+                                        // src= {texteditor}
                                         alt="Simple Text Editor project screenshot"
                                         className="w-[500px] object-cover"
                                     />
