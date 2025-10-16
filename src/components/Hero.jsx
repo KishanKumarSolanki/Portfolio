@@ -3,6 +3,7 @@ import profile from '../assets/profile.jpg';
 import resumePDF from '../assets/resume.pdf'; 
 import { TypeAnimation } from 'react-type-animation';
 import Tilt from 'react-parallax-tilt';
+// import { DottedGlowBackground } from "./ui/dotted-glow-background";
 
 // Inline SVG for the 'ArrowRight' icon (simulating lucide-react or similar)
 const ArrowRightIcon = ({ className = 'w-5 h-5' }) => (
@@ -79,7 +80,7 @@ const HeroSection = () => {
   const profileImageUrl = profile;
 
   return (
-    <section className="relative flex items-center justify-center min-h-screen w-full bg-gray-950 text-white p-4 overflow-hidden">
+    <section id="about" className="relative flex items-center justify-center min-h-screen w-full bg-gray-950 text-white p-4 overflow-hidden">
       {/* Background Dots & Gradient Overlay */}
       <div className="absolute inset-0 z-0 opacity-10 [mask-image:radial-gradient(100%_100%_at_top,white,transparent)]">
         <div className="absolute inset-0 bg-repeat bg-[size:20px_20px] [background-image:radial-gradient(circle_at_center,rgba(255,255,255,0.2)_1px,transparent_0)]"></div>
@@ -166,7 +167,8 @@ const Hero = () => {
   return (
     <div className="font-sans antialiased">
       <HeroSection />
-      {/* Placeholder for the rest of the application content */}
+    
+           {/* <DottedGlowBackground /> */}
     </div>
   );
 };

@@ -24,7 +24,12 @@ const Navbar = () => {
 
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const navHeight = 80; // Adjust this value based on your navbar height
+      const sectionTop = section.offsetTop - navHeight;
+      window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth",
+      });
     }
   };
 

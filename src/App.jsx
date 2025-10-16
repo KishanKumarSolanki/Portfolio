@@ -3,7 +3,7 @@ import { BackgroundRippleEffect } from "./components/ui/background-ripple-effect
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import BlurBlob from "./BlurBlob";
-import { DottedGlowBackground } from "./components/ui/dotted-glow-background";
+import Skills from "./components/Skills";
 
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
         <BackgroundRippleEffect />
         <Navbar />
         <Hero />
-        <DottedGlowBackground />
-        <BlurBlob position={{ top: '35%', left: '20%' }} size={{ width: '30%', height: '40%' }} />
-     
+        <BlurBlob position={{ top: '50%', left: '70%' }} size={{ width: '30%', height: '40%' }} />
+        <Skills />
+      
       </div>
     </>
   )
