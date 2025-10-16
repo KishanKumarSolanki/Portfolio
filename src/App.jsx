@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import BlurBlob from "./BlurBlob";
 import Skills from "./components/Skills";
-
+import { ScrollProgress } from "./components/ui/scroll-progress";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Hero />
         <BlurBlob position={{ top: '50%', left: '70%' }} size={{ width: '30%', height: '40%' }} />
         <Skills />
-      
+        <ScrollProgress />
       </div>
     </>
   )
