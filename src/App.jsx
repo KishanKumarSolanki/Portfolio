@@ -6,6 +6,7 @@ import BlurBlob from "./BlurBlob";
 import Skills from "./components/Skills";
 import { ScrollProgress } from "./components/ui/scroll-progress";
 import Project from "./components/Project";
+import Contect from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Skills />
         <ScrollProgress />
         <Project />
+        <Contect />
         <Footer />
       </div>
     </>
