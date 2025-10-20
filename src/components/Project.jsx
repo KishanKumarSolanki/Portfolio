@@ -26,7 +26,7 @@ const Project = () => {
                                     <img
                                         src= {texteditor}
                                         alt="Simple Text Editor project screenshot"
-                                        className="w-[500px] object-cover"
+                                        className="w-[600px] object-cover"
                                     />
                                 </div>
                             </div>
@@ -93,7 +93,7 @@ const Project = () => {
                                 <div className="bg-gradient-to-b from-[#1E1E20] to-[#0B0B0C] rounded-2xl overflow-hidden shadow-lg border border-gray-800">
                                     <img
                                         src= {FoodHub}
-                                        alt="Simple Text Editor project screenshot"
+                                        alt="Food Hub project screenshot"
                                         className="w-[500px] object-cover"
                                     />
                                 </div>
@@ -161,7 +161,7 @@ const Project = () => {
                                 <div className="bg-gradient-to-b from-[#1E1E20] to-[#0B0B0C] rounded-2xl overflow-hidden shadow-lg border border-gray-800">
                                     <img
                                         src= {HappyToy}
-                                        alt="Simple Text Editor project screenshot"
+                                        alt="Happy project screenshot"
                                         className="w-[500px] object-cover"
                                     />
                                 </div>
