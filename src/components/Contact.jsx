@@ -21,19 +21,32 @@ const Contact = () => {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      // Using environment-specific URL
+      const baseUrl = import.meta.env.PROD 
+        ? 'https://your-vercel-url.vercel.app' 
+        : 'http://localhost:5000';
+
+      const response = await fetch(`${baseUrl}/api/contact`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
       });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to send message');
+      }
 
       const result = await response.json();
       
       if (result.success) {
-        toast.success('Message sent successfully!');
+        toast.success(result.message || 'Message sent successfully!');
         reset();
       } else {
-        toast.error('Failed to send message. Please try again.');
+        throw new Error(result.message || 'Failed to send message');
       }
     } catch (error) {
       console.error('Error:', error);
