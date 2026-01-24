@@ -16,7 +16,7 @@ async function sendMail({ name, email, message }) {
     const sanitizedMessage = sanitize(message);
 
     const data = await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>', // Replace with your verified email in production
+      from: 'kkishankumar9983@gmail.com', // Replace with your verified email in production
       to: process.env.RECEIVER_EMAIL,
       subject: `New Contact Form Message from ${sanitizedName}`,
       html: `

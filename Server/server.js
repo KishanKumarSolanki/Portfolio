@@ -6,7 +6,7 @@ const app = express();
 
 // Configure CORS to allow requests from your frontend
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  origin: ['http://localhost:5173', 'https://portfolio-server-xwva.onrender.com'],
   methods: ['POST'],
   credentials: true
 }));

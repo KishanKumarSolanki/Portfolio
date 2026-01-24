@@ -23,7 +23,7 @@ const Contact = () => {
     try {
       // Using environment-specific URL
       const baseUrl = import.meta.env.PROD 
-        ? 'https://your-vercel-url.vercel.app' 
+        ? 'https://portfolio-server-xwva.onrender.com' 
         : 'http://localhost:5000';
 
       const response = await fetch(`${baseUrl}/api/contact`, {
