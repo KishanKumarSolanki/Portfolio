@@ -2,7 +2,7 @@ import React from 'react'
 
 const Experience = () => {
     return (
-        <section id="experience" className="min-h-screen w-full bg-gray-950 text-white py-16 px-6 flex flex-col items-center">
+        <section id="experience" className="min-h-[70vh] w-full bg-gray-950 text-white py-16 px-6 flex flex-col items-center">
             <div className="max-w-6xl mx-auto">
                 {/* Section Title */}
                 <div className="text-center mb-8">
@@ -26,7 +26,7 @@ const Experience = () => {
                     Contributed to the development of web solutions while collaborating effectively within a cross-functional team.
                     Gained hands-on expertise in <span className="text-white font-medium">Project Management</span> and
                     <span className="text-white font-medium"> Client Communication</span>. Key achievement includes the seamless
-                    integration of <span className="text-[#8245ec]">Razorpay Payment Gateway</span> to facilitate secure online transactions.
+                    integration of <span className="text-pink-500">Razorpay Payment Gateway</span> to facilitate secure online transactions.
                 </p>
                 <div className="mt-6 border-t border-white/10 pt-4">
                     <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
