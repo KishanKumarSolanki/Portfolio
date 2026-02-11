@@ -8,6 +8,7 @@ import { ScrollProgress } from "./components/ui/scroll-progress";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Navbar />
         <Hero />
         <BlurBlob position={{ top: '50%', left: '70%' }} size={{ width: '30%', height: '40%' }} />
+        <Experience />
         <Skills />
         <ScrollProgress />
         <Project />
