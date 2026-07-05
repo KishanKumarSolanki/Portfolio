@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite", 
-    "build": "vite build", 
-    "preview": "vite preview", 
-    "start": "react-scripts start", 
-    "server": "cd server && node index.js", 
-    "concurrent-dev": "concurrently \"npm run server\" \"npm run dev\"" 
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "react-scripts start",
+    "server": "cd server && node index.js",
+    "concurrent-dev": "concurrently \"npm run server\" \"npm run dev\""
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -41,6 +41,7 @@
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.4",
+    "baseline-browser-mapping": "^2.10.42",
     "eslint": "^9.36.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
